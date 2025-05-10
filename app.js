@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname,"/public")));
  
 main()
     .then(()=>{
+      console.log("Connected to DB");
         console.log("Connected to DB");
     })
 
