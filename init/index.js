@@ -17,7 +17,7 @@ main()
     })
 
     const initDB=async()=>{
-        // await Listing.deleteMany({});
+        //await Listing.deleteMany({});
         await Listing.insertMany(initdata.data);
         console.log("Data was Saved");
     }

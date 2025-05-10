@@ -7,7 +7,11 @@ const ListingSchema=new Schema({
         required:true
 
     },
-    description:String,
+    description:{
+        type:String,
+        required:true
+
+    },
     image:{
         filename: String,
         url: {
@@ -17,9 +21,21 @@ const ListingSchema=new Schema({
             set:(v)=> v==="" ? "https://media.istockphoto.com/id/1449829864/photo/modern-house-with-solar-panel.jpg?s=1024x1024&w=is&k=20&c=MGmU9epmM8qunQnVlyiZ4GW33WK1usJc9PGayg6TNpg=" : v,
         }
     },
-    price:Number,
-    location:String,
-    country:String
+    price:{
+        type:Number,
+        required:true
+
+    },
+    location:{
+        type:String,
+        required:true
+
+    },
+    country:{
+        type:String,
+        required:true
+
+    },
 })
 
 const Listing=mongoose.model("Listing",ListingSchema);
