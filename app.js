@@ -83,7 +83,8 @@ app.delete("/listings/:id",wrapAsync(async(req,res)=>{
   res.redirect("/listings");
 }))
 
-app.get("/",(req,res)=>{
+app.get("/",async(req,res)=>{
+    const allListings=await Listing.find({});
     res.render("listings/index.ejs",{allListings});
     
 })
