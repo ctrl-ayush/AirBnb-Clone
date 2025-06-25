@@ -6,15 +6,21 @@
     display: flex;
     flex-direction: column;   /* footer ko hamesa neeche rakhne ke liye */
     min-height: 100vh;
+   
 } 
 
 .container{
-    flex: 1;                         /* footer ko hamesa neeche rakhne ke liye */
+    flex: 1;            
+    margin-left: 7.5%; 
+    margin-top: 20px;            /* footer ko hamesa neeche rakhne ke liye */
 }
 
 .fa-compass{
-    color:rgb(252, 81, 81);
+    color:rgb(252, 81, 81) !important;
     font-size: 2rem;
+}
+.navbar-toggler-icon,collapse navbar-collapse{
+    color: red !important;
 }
 
 .navbar{
@@ -68,8 +74,11 @@
     border: none !important;
     margin-bottom: 2rem !important;
     padding: 0 2rem !important;
+    border: 1px solid white !important;
+    border-radius: 10px !important;
 }
 .card-img-top{
+    margin-top: 1rem !important;
     border-radius: 5px;
     width: 100% !important;
     object-fit: cover !important;
@@ -92,5 +101,7 @@
 .bg-body-tertiary {
     background-color: black !important; 
 }
-  
+.row-error{
+    text-align: center;
+}
   
