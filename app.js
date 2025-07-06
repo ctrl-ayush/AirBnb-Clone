@@ -68,8 +68,10 @@ app.get("/listings/:id/new",wrapAsync(async(req,res)=>{
     let{id}=req.params;
     const listing = await Listing.findById(id);
     res.render("listings/edit.ejs",{listing});
-  } catch(err){
-    next(err);}
+  } 
+  catch(err){
+    next(err);
+  }
 }))
 
 app.put("/listings/:id",wrapAsync(async(req,res)=>{
@@ -96,7 +98,7 @@ app.all("*",(req,res,next)=>{
 
 app.use((err,req,res,next)=>{
   let{statusCode=500, message="Something Went wrong"}=err;
-  res.status(statusCode).render("listings/error.ejs",{message});
+  res.status(statusCode).render("listings/error.ejs",{statusCode,message});
   // res.status(statusCode).send(message);
 
 })

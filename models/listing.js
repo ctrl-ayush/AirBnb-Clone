@@ -36,6 +36,7 @@ const ListingSchema=new Schema({
         required:true
 
     },
+    
 })
 
 const Listing=mongoose.model("Listing",ListingSchema);
